@@ -1,2 +1,13 @@
+#cloud-config
+rancher:
+  environment:
+    FLANNEL_NETWORK: 10.0.82.0/23
+  network:
+    interfaces:
+      eth0:
+        dhcp: false
+        address: 10.0.80.20/24
+        gateway: 10.0.80.1
+        mtu: 1500
 ssh_authorized_keys:
-- ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA+ApTqJU4YNqbEIEKcWbQeVmRpTkWRNN8BwEw3UpfpItTxcam5yOIjUgfamC5qWg3wUEcc+WwOJNkG6tdbXP/hQy/eqjM3Szp/em2YO7eksD4XvHn6gQuVcia5Tnrq1o38AtUzm4HsWEQJURlil1U3KHDu3sXSrFwU2/THxn+Jt13JXZcLKDQ+HCK46hMgg8Z+H7ADjnopfgGJL264IbPOD4TsbXwErCEA+TnUezHzJd9+tzxRYa3gmtsMH0Opa8qKuzijnrIQdYSlsrHbRKH8JVilFCOJf30eecLpG8hQPAMwHgQU3T6Wd/Z8pZjgRJE6huPVngMCXdDoylTq+x1sw==
+  - ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA+ApTqJU4YNqbEIEKcWbQeVmRpTkWRNN8BwEw3UpfpItTxcam5yOIjUgfamC5qWg3wUEcc+WwOJNkG6tdbXP/hQy/eqjM3Szp/em2YO7eksD4XvHn6gQuVcia5Tnrq1o38AtUzm4HsWEQJURlil1U3KHDu3sXSrFwU2/THxn+Jt13JXZcLKDQ+HCK46hMgg8Z+H7ADjnopfgGJL264IbPOD4TsbXwErCEA+TnUezHzJd9+tzxRYa3gmtsMH0Opa8qKuzijnrIQdYSlsrHbRKH8JVilFCOJf30eecLpG8hQPAMwHgQU3T6Wd/Z8pZjgRJE6huPVngMCXdDoylTq+x1sw==
